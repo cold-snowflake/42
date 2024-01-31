@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: snowflake <hrychkatetiana@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/29 22:37:42 by snowflake         #+#    #+#             */
-/*   Updated: 2024/01/29 23:21:02 by snowflake        ###   ########.fr       */
+/*   Created: 2024/01/29 23:20:34 by snowflake         #+#    #+#             */
+/*   Updated: 2024/01/31 19:20:03 by snowflake        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include <string.h> 
 
-int ft_isalnum(char a)
+void *ft_memset(void *str, int c, size_t n)
 {
-    if (ft_isalpha(a) || ft_isdigit (a))
-        return (1);
-    return(0);
+	size_t i;
+	char *string;
+
+	i = 0;
+	string = (char *) str;
+	while (i < n)
+	{
+		string[i] = c;
+		i++;
+	}
+	return (str);
 }
